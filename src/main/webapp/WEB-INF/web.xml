@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<servlet>
+		<servlet-name>add</servlet-name> <!-- Identifier -->
+		<servlet-class>Addition</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>add</servlet-name> <!-- for the above identifier reference -->
+		<url-pattern>/add</url-pattern> <!-- to map in the HTML Pages -->
+	</servlet-mapping>
+	
+	
+	<!-- Sub mapping -->
+	<servlet>
+		<servlet-name>sub1</servlet-name> <!-- Identifier -->
+		<servlet-class>Sub</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>sub1</servlet-name> <!-- for the above identifier reference -->
+		<url-pattern>/sub</url-pattern> <!-- to map in the HTML Pages -->
+	</servlet-mapping>
+	
+	
+	<!-- open / pop up the first page in the application -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
